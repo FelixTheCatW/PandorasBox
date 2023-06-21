@@ -1,0 +1,34 @@
+.txt {
+    font-weight: 700;
+    font-size: xx-large;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+body {
+    font-family: ui-sans-serif;    
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+svg {
+    width: 200px;
+    height: 200px;
+    padding-bottom: 30px;
+}
+
+article {
+    padding: 0 3px 0;
+}
+
+footer {
+    margin-top: auto;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+}
