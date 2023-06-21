@@ -1,7 +1,21 @@
 var textWrapper = document.querySelector('.txt');
-
+var btnDice = document.querySelector('#btnDice');
+btnDice.addEventListener('touchstart', startNextSubject);
+btnDice.addEventListener('mousedown', startNextSubject);
+btnDice.addEventListener('touchend', stopNextSubject);
+btnDice.addEventListener('mouseup', stopNextSubject);
+btnDice.addEventListener('mouseout', stopNextSubject);
 function nextSubject() {
     textWrapper.innerHTML = shuffledSubjects();
+}
+var loop = undefined;
+function startNextSubject() {
+    event.preventDefault();
+    loop = setInterval(nextSubject, 80, Infinity);
+}
+
+function stopNextSubject(){
+    clearInterval(loop);
 }
 
 function randomNoRepeats(array) {
