@@ -1,4 +1,11 @@
-.txt {
+body {
+    font-family: ui-sans-serif;    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#spnSubject {
     font-weight: 700;
     font-size: xx-large;
     -webkit-hyphens: auto;
@@ -7,19 +14,10 @@
     hyphens: auto;
 }
 
-body {
-    font-family: ui-sans-serif;    
-    height: 100vh;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-svg {
+#btnDice {
     width: 200px;
     height: 200px;
     padding-bottom: 30px;
-    background-color: white;
 }
 
 article {
@@ -28,8 +26,5 @@ article {
 
 footer {
     margin-top: auto;
-    align-items: center;
-    align-content: center;
     text-align: center;
-
 }

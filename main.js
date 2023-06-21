@@ -1,12 +1,17 @@
-var textWrapper = document.querySelector('.txt');
+var textWrapper = document.querySelector('#spnSubject');
 var btnDice = document.querySelector('#btnDice');
 btnDice.addEventListener('touchstart', startNextSubject);
 btnDice.addEventListener('mousedown', startNextSubject);
 btnDice.addEventListener('touchend', stopNextSubject);
 btnDice.addEventListener('mouseup', stopNextSubject);
 btnDice.addEventListener('mouseout', stopNextSubject);
+
 function nextSubject() {
-    textWrapper.innerHTML = shuffledSubjects();
+    var a = shuffledSubjects();
+    if (a === textWrapper.innerHTML) {
+        console.log(a);
+    }
+    textWrapper.innerHTML = a;
 }
 var loop = undefined;
 function startNextSubject() {
@@ -14,7 +19,7 @@ function startNextSubject() {
     loop = setInterval(nextSubject, 80, Infinity);
 }
 
-function stopNextSubject(){
+function stopNextSubject() {
     clearInterval(loop);
 }
 
